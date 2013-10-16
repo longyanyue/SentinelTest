@@ -89,3 +89,21 @@ system.codes2 <- as.data.frame(matrix(0, nrow = 1, ncol = 3))
 colnames(system.codes2) <- c("MINUTES", "Codes", "Action")
 
 
+
+
+probs.pH = c(.05,.95,.05,.95)
+probs.EC = c(.05,.95,.10,.90)
+probs.TurbS = c(.05,.95,.05,.95)
+probs.TempC =  c(.05,.95,.05,.95)
+probs.DisOxy = c(.05,.95,.05,.95)
+probs.Redox =  c(.05,.95,.05,.95)
+
+
+bounds.pH = c(6.3,8.1)
+bounds.EC = c(940,3000)
+bounds.TurbA = c(50,100)
+bounds.TurbS = c(30, 600)
+bounds.TempA = c(20,24.6)
+bounds.TempC = c(19,22)
+bounds.DisOxy = c(0.0,2)
+bounds.Redox = as.numeric(c("-0.3800", "-0.28995" ) )

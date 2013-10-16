@@ -46,10 +46,10 @@ action<-"NONE"
 
 
 
-probs.pH = c(.05,.95,.05,.95)
-probs.EC = c(.05,.95,.10,.90)
-probs.TurbS = c(.05,.95,.05,.95)
-probs.TempC =  c(.05,.95,.05,.95)
-probs.DisOxy = c(.05,.95,.05,.95)
-probs.Redox =  c(.05,.95,.05,.95)
+#probs.pH = c(.05,.95,.05,.95)
+#probs.EC = c(.05,.95,.10,.90)
+#probs.TurbS = c(.05,.95,.05,.95)
+#probs.TempC =  c(.05,.95,.05,.95)
+#probs.DisOxy = c(.05,.95,.05,.95)
+#probs.Redox =  c(.05,.95,.05,.95)
 

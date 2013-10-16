@@ -28,8 +28,6 @@ repeat{
   lenpH2 <- 0
   lenCond2 <- 0
 
-  
-  
   ##test for alerts and plot
   if(exists("dataset.TurbS1") && exists("dataset.TempC1")
      && exists("dataset.pH1") && exists("dataset.Cond1")) {
@@ -50,12 +48,17 @@ repeat{
   if(lenpH1 >= 241 && lenTempC1 >= 241 && lenCond1 >=241 && UPDATE) {    
     
     
-       # alerts.pH( dataset.pH1 , lenpH1, probS = probs.pH, period.to.show = period, bounds.pH)
-       # alerts.EC( dataset.Cond1 , lenCond1, probS = probs.EC, period.to.show = period, bounds.EC)
-      #  alerts.TurbS( dataset.TurbS1 , lenTurbS1, probS = probs.TurbS, period.to.show = period, bounds.TurbS)
-     #  alerts.TempC( dataset.TempC1 , lenTempC1, probS = probs.TempC, period.to.show = period, bounds.TempC, wait=c(30,30))    
+        #alerts.pH1( dataset.pH1 , lenpH1, probS = probs.pH, period.to.show = period, bounds.pH)
+        #alerts.EC1( dataset.Cond1 , lenCond1, probS = probs.EC, period.to.show = period, bounds.EC)
+        #alerts.TurbS1( dataset.TurbS1 , lenTurbS1, probS = probs.TurbS, period.to.show = period, bounds.TurbS)
+        #alerts.TempC1( dataset.TempC1 , lenTempC1, probS = probs.TempC, period.to.show = period, bounds.TempC, wait=c(30,30))    
     
     
+        alerts.pH1( dataset.pH1 , lenpH1, period.to.show = period, bounds.pH)
+        alerts.EC1( dataset.Cond1 , lenCond1, period.to.show = period, bounds.EC)
+        alerts.TurbS1( dataset.TurbS1 , lenTurbS1,  period.to.show = period, bounds.TurbS)
+        alerts.TempC1( dataset.TempC1 , lenTempC1,  period.to.show = period, bounds.TempC, wait=c(30,30))    
+        
     
     ##-------------------------------------------------------------------------
     ##      MULTI ALARMS ??
@@ -90,6 +93,19 @@ repeat{
   }
   
   if(lenpH2 >= 241 && lenTempC2 >= 241 && lenCond2 >=241 && UPDATE) {    
+    
+    #alerts.pH2( dataset.pH1 , lenpH1, probS = probs.pH, period.to.show = period, bounds.pH)
+    #alerts.EC2( dataset.Cond1 , lenCond1, probS = probs.EC, period.to.show = period, bounds.EC)
+    #alerts.TurbS2( dataset.TurbS1 , lenTurbS1, probS = probs.TurbS, period.to.show = period, bounds.TurbS)
+    #alerts.TempC2( dataset.TempC1 , lenTempC1, probS = probs.TempC, period.to.show = period, bounds.TempC, wait=c(30,30))    
+    
+    
+    alerts.pH2( dataset.pH1 , lenpH1, period.to.show = period, bounds.pH)
+    alerts.EC2( dataset.Cond1 , lenCond1,  period.to.show = period, bounds.EC)
+    alerts.TurbS2( dataset.TurbS1 , lenTurbS1,period.to.show = period, bounds.TurbS)
+    alerts.TempC2( dataset.TempC1 , lenTempC1,period.to.show = period, bounds.TempC, wait=c(30,30))    
+    
+    
     ##-------------------------------------------------------------------------
     ##      MULTI ALARMS ??
     ##------------------------------------------------------------------------- 
@@ -127,5 +143,4 @@ repeat{
   }
   
   UPDATE <- FALSE 
-  Sys.sleep(60)
 }
