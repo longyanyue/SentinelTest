@@ -1,0 +1,39 @@
+Refactoring:
+
+Delete All DixOxy and Redox related code.
+
+function getHeader -> constant kHeader
+function last -> function Last
+function toDecimal -> function ToDecimal
+function saveimage -> function SaveImage
+function early.morning -> function EarlyMorning
+function get.data -> GetData
+function toDatabase -> ToDatabase
+function prepareData -> PrepareData
+function alarm.logic.test -> AlarmLogicTest
+function getymd -> GetYMD
+function possible.low.flow -> PossibleLowFlow
+
+constant years -> kYears
+
+
+parameter in GetData 
+from (host = "localhost", port = 8888, variables = "pH") to ()
+
+variable monthInDB -> month.in.database
+variable w1 -> dataset.mix
+variable newdatasetTurbS -> dataset.TurbS1 and dataset TurbS2
+variable newdatasetC -> dataset.TempC1 and dataset.TempC2
+variable newdatasetA -> dataset.TempA1 and dataset.TempA2
+variable newdatasetTurbA -> dataset.TurbS1 and dataset.TurbS2
+variable newdatasetpH -> dataset.PH1 and dataset.PH2
+variable newdatasetCond -> dataset.Cond1 and dataset.Cond2
+variable countAB.* -> countAB.*1 & countAB.*2
+variable countBW.* -> countBW.*1 & countBW.*2
+variable output.* -> sensor1.* & sensor2.*
+variable LeapYear -> years.leap
+variable System.codes -> system.codes1 & system.codes2
+variable DaysOffset.Year -> offset.days
+
+function call windows(width = 35, height = 30) -> windows(width = 60, height = 40)
+function call par(mfcol = c(6,1)) -> par(mfcol = c(4,2))
